@@ -13,7 +13,7 @@ jobs:
   deployment_pipeline:
     runs-on: ubuntu-latest
 
-     env:
+    env:
       SKIP_COMMITS: ${{ !contains(join(toJson(github.event.commits.*.message), ', '), '#skip') }}
 
     steps:
